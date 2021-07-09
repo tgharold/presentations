@@ -12,6 +12,8 @@
   - [Object Factories (Extension methods)](#object-factories-extension-methods)
   - [How much to mock](#how-much-to-mock)
   - [Examples](#examples)
+- [Further Reading](#further-reading)
+  - [Test Pyramids](#test-pyramids)
 
 # Theory
 
@@ -97,3 +99,13 @@ Where do we put the test harness code? Previously was a mish-mash of Hosts.Testi
 - AccApi: Create_shows_that_migrations_have_run
 - AccApi: SendGridClientMockFactory
 - AccApi: EnhancedTwilioRestClientMockFactory
+
+# Further Reading
+
+## Test Pyramids
+
+- https://www.contino.io/insights/the-testing-pyramid
+- https://www.browserstack.com/guide/testing-pyramid-for-test-automation
+- https://www.kaizenko.com/what-is-the-testing-pyramid/
+- https://cobaltintelligence.com/blog/integration-tests-are-good/
+- https://www.agileconnection.com/article/eroding-agile-test-pyramid
