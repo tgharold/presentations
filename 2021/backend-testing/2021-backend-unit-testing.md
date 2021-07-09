@@ -34,6 +34,7 @@ Links:
 - Any method that makes non-trivial decisions, or which takes in multiple inputs is a candidate.
 - Very useful for calculation methods (build the export filename, calculate eligibility window)
 - Can encode business rules
+- Arrange, Act, Assert pattern
 - https://en.wikipedia.org/wiki/Test-driven_development
 
 ## BDD (Behavior driven development)
@@ -59,11 +60,14 @@ Where do we put the test harness code? Previously was a mish-mash of Hosts.Testi
 - Getting a fresh EF context can be tricky at times (IDisposable issues?)
 - Often layered, with each layer having specific duties.
 - RimDev.Migrations.Testing -- TestSqlClientDatabaseFixture handles creation of a test database, but goes no further.
+- Projects should then inherit from that fixture and create a fixture specific to their needs.
 
-## Object Factories
+## Object Factories (Extension methods)
 
-- Can be simpler in the long run for tests versus manual builds of objects (but not always)
-- Can be written defensively
+- They are just extension methods to help the tester build an object.
+- Can be simpler in the long run for tests versus manual builds of objects (but not always).
+- Can be written defensively to only allow valid values.
+- If they make the tests easier to read, use them.  Otherwise do things manually.
 
 ## How much to mock
 
